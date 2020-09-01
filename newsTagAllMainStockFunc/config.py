@@ -4,3 +4,5 @@ apiIPAdress = {
     'uat':'47.107.33.27',
     'prod':'47.107.33.27',
 }
+
+envirChoice = apiIPAdress['dev']

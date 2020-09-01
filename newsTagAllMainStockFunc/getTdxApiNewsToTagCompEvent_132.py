@@ -8,7 +8,7 @@ import config
 
 tdxMarketCode = '132'
 
-apiIPAdress = config.apiIPAdress['local']
+apiIPAdress = config.envirChoice
 print('apiIPAdress:'+apiIPAdress)
 
 
