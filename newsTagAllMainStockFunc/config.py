@@ -5,4 +5,4 @@ apiIPAdress = {
     'prod':'47.107.33.27',
 }
 
-envirChoice = apiIPAdress['local']
+envirChoice = apiIPAdress['dev']
