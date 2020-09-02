@@ -17,6 +17,7 @@ def getTdxStockMarketNews(marketIndex):
     postJson = json.dumps({"Params": [marketIndex, "", "1", "9999"]})
     tdxResponse = requests.post(url, data=postJson).text
     tdxResponse = json.loads(tdxResponse)
+    print(tdxResponse)
     return tdxResponse
 
 
@@ -64,6 +65,8 @@ def itemApiResIntoDb(newsResult, tdxMarketCode):
     tittle = newsResult['title']
     content = newsResult['content']
     time = newsResult['publish_time']
+    print("newsTittle")
+    print(tittle)
 
     url = "http://"+apiIPAdress+":8891/allMainStockTagSearch"
     headers = {
@@ -77,10 +80,11 @@ def itemApiResIntoDb(newsResult, tdxMarketCode):
     }
 
     response = requests.post(url, data=form_data, headers=headers).text
-    print('response')
     response = json.loads(response)
     res_content = response['content']
     res_tittle = response['tittle']
+    print('res_tittle')
+    print(res_tittle)
     res_code = response['code']
     res_time = response['time']
     res_stockName = response['stockName']
@@ -127,13 +131,7 @@ def itemApiResIntoDb(newsResult, tdxMarketCode):
             )
 
             cursor02.execute(sql)
-
             connection02.commit()
-
-    # if (res_code):
-    #         sql = "INSERT INTO app_config_shares_news_info_get_all_shares (id,content,title,code,time,stock_name,market,created_by,last_nmodified_by,gmt_create,gmt_modified) VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s') ON duplicate KEY UPDATE title = title " % (
-    #         id, res_content, res_tittle, res_code, res_time, res_stockName, res_market,created_by, last_modified_by,gmt_create, gmt_modified)
-
 
 for newsResult in tdxNewsDictLi:
     try:
