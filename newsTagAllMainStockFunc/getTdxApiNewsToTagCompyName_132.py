@@ -14,7 +14,7 @@ print('apiIPAdress:'+apiIPAdress)
 
 def getTdxStockMarketNews(marketIndex):
     url = 'http://8.129.11.22:7619/TQLEX?Entry=CWServ.mzx_yw'
-    postJson = json.dumps({"Params": [marketIndex, "", "1", "9999"]})
+    postJson = json.dumps({"Params": [marketIndex, "", "1", "999"]})
     tdxResponse = requests.post(url, data=postJson).text
     tdxResponse = json.loads(tdxResponse)
     print(tdxResponse)

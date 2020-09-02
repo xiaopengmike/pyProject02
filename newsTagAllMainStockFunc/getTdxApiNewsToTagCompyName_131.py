@@ -14,7 +14,7 @@ print('apiIPAdress:'+apiIPAdress)
 
 def getTdxStockMarketNews(marketIndex):
     url = 'http://8.129.11.22:7619/TQLEX?Entry=CWServ.mzx_yw'
-    postJson = json.dumps({"Params": [marketIndex, "", "1", "9999"]})
+    postJson = json.dumps({"Params": [marketIndex, "", "1", "999"]})
     tdxResponse = requests.post(url, data=postJson).text
     tdxResponse = json.loads(tdxResponse)
     print(tdxResponse)
@@ -116,7 +116,7 @@ def itemApiResIntoDb(newsResult, tdxMarketCode):
             newsItemWithOneStockDic['time'] = res_time
 
             # 如果有按股票重复，则用ON DUPLICATE KEY UPDATE更新那条数据。
-            sql = "INSERT INTO app_config_shares_news_info_get_all_shares (id,content,title,code,publish_time,stock_name,market,created_by,last_modified_by,gmt_create,gmt_modified) VALUE ('{id}','{title}','{content}','{code}','{publish_time}','{stock_name}','{market}','{created_by}','{last_modified_by}','{gmt_create}','{gmt_modified}') ON DUPLICATE KEY UPDATE id='{id}',content='{content}',title='{title}',code='{code}',publish_time='{publish_time}',stock_name='{stock_name}',market='{market}',created_by='{created_by}',last_modified_by='{last_modified_by}',gmt_create='{gmt_create}',gmt_modified='{gmt_modified}'".format(
+            sql = "INSERT INTO app_config_shares_news_info (id,content,title,code,publish_time,stock_name,market,created_by,last_modified_by,gmt_create,gmt_modified) VALUE ('{id}','{title}','{content}','{code}','{publish_time}','{stock_name}','{market}','{created_by}','{last_modified_by}','{gmt_create}','{gmt_modified}') ON DUPLICATE KEY UPDATE id='{id}',content='{content}',title='{title}',code='{code}',publish_time='{publish_time}',stock_name='{stock_name}',market='{market}',created_by='{created_by}',last_modified_by='{last_modified_by}',gmt_create='{gmt_create}',gmt_modified='{gmt_modified}'".format(
                 id=id,
                 content=res_content,
                 title=res_tittle,
