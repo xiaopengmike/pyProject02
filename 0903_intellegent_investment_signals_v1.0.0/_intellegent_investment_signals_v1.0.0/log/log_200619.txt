@@ -1,0 +1,13 @@
+2020-06-19 17:40:44,573 - Trader - INFO - Hello, World.
+2020-06-19 17:40:44,577 - Trader - INFO - main run.
+2020-06-19 17:40:44,577 - Trader - INFO - strategy run.
+2020-06-19 17:41:49,500 - Trader - INFO - complete
+2020-06-19 19:32:01,540 - Trader - INFO - Hello, World.
+2020-06-19 19:32:01,541 - Trader - INFO - main run.
+2020-06-19 19:32:01,541 - Trader - INFO - strategy run.
+2020-06-19 19:38:26,275 - Trader - INFO - Hello, World.
+2020-06-19 19:38:26,276 - Trader - INFO - main run.
+2020-06-19 19:38:26,276 - Trader - INFO - strategy run.
+2020-06-19 20:08:51,538 - Trader - INFO - Hello, World.
+2020-06-19 20:08:51,539 - Trader - INFO - main run.
+2020-06-19 20:08:51,539 - Trader - INFO - strategy run.

@@ -1,0 +1,36 @@
+2020-06-20 13:18:18,872 - Trader - INFO - Hello, World.
+2020-06-20 13:18:18,875 - Trader - INFO - main run.
+2020-06-20 13:18:18,875 - Trader - INFO - strategy run.
+2020-06-20 13:18:19,677 - Trader - ERROR - except
+2020-06-20 13:18:19,682 - Trader - ERROR - Traceback (most recent call last):
+  File ".\StrategyTrader_RC0618.py", line 129, in <module>
+    StrategyTraderJJ()
+  File ".\StrategyTrader_RC0618.py", line 95, in StrategyTraderJJ
+    jstrategy = Jstrategy(loaddata=(strategy_no==0))
+  File "D:\JZYCode\smart_investment_signals\Core\AllStrategiesRC0617.py", line 13, in __init__
+    super(Jstrategy, self).__init__(*args, **kwargs)
+  File "D:\JZYCode\smart_investment_signals\Core\StrategyConnRC0617.py", line 175, in __init__
+    self._init_GR()
+  File "D:\JZYCode\smart_investment_signals\Core\StrategyConnRC0617.py", line 201, in _init_GR
+    SecuCode, SecuInfo = self.GR.get_stocklist()
+  File "D:\JZYCode\smart_investment_signals\Core\GildataRem.py", line 187, in get_stocklist
+    data = self.db.read_stocklist()
+  File "D:\JZYCode\smart_investment_signals\Core\GildataRem.py", line 61, in read_stocklist
+    dfdata = pd.DataFrame(data=fdata,columns=columns_list)
+  File "C:\vnstudio\lib\site-packages\pandas\core\frame.py", line 435, in __init__
+    arrays, columns = to_arrays(data, columns, dtype=dtype)
+  File "C:\vnstudio\lib\site-packages\pandas\core\internals\construction.py", line 404, in to_arrays
+    dtype=dtype)
+  File "C:\vnstudio\lib\site-packages\pandas\core\internals\construction.py", line 431, in _list_to_arrays
+    content = list(lib.to_object_array_tuples(data).T)
+TypeError: Argument 'rows' has incorrect type (expected list, got tuple)
+
+2020-06-20 13:18:19,688 - Trader - INFO - complete
+2020-06-20 13:18:37,739 - Trader - INFO - Hello, World.
+2020-06-20 13:18:37,753 - Trader - INFO - main run.
+2020-06-20 13:18:37,753 - Trader - INFO - strategy run.
+2020-06-20 13:19:16,599 - Trader - INFO - complete
+2020-06-20 13:20:02,924 - Trader - INFO - Hello, World.
+2020-06-20 13:20:02,935 - Trader - INFO - main run.
+2020-06-20 13:20:02,936 - Trader - INFO - strategy run.
+2020-06-20 13:20:41,255 - Trader - INFO - complete

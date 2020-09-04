@@ -96,7 +96,6 @@ def itemApiResIntoDb(newsResult, tdxMarketCode):
     gmt_create = strftime("%Y-%m-%d %H:%M:%S", gmtime())
     gmt_modified = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
-
     print(res_stockName)
     print(res_code)
     print('res_Type')
